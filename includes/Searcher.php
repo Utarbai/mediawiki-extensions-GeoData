@@ -18,7 +18,7 @@ class Searcher extends ElasticsearchIntermediary {
 		/** @var SearchConfig $config */
 		$config = ConfigFactory::getDefaultInstance()->makeConfig( 'CirrusSearch' );
 		/** @suppress PhanTypeMismatchArgument */
-		$connection = new \CirrusSearch\Connection( $config );
+		$connection = new \CirrusSearch\Connection( $config, 'codfw' );
 
 		parent::__construct( $connection, $user, 0 );
 	}
